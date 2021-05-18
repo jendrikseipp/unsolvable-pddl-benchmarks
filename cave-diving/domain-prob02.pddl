@@ -6,6 +6,9 @@
 (define (domain cave-diving-strips)
   (:requirements :typing)
   (:types location diver tank quantity)
+  (:constants
+    d0 d1 - diver
+  )
   (:predicates
     (at-tank ?t - tank ?l - location)
     (in-storage ?t - tank)
@@ -22,10 +25,6 @@
     (capacity ?d - diver ?q - quantity)
     (have-photo ?l - location)
     (in-water )
-  )
-
-  (:constants
-    d0 d1 - diver
   )
 
   (:action hire-diver-d0

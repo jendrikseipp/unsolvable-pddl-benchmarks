@@ -1,6 +1,7 @@
 (define (domain gripper-typed)
 (:requirements :typing)
 (:types room ball gripper ball-property1 bnum gripper-property1 gnum  - object )
+(:constants free-true - gripper-property1)
 (:predicates   (at-robby ?r - room)
   (ball-less ?l - bnum ?m - bnum)
   (count-ball ?ball - ball ?ball-property1 - object ?bnum - bnum)
@@ -11,7 +12,6 @@
   (gripper-lte-sum ?sum1 - gnum ?sum2 - gnum ?lte - gnum)
   (gripper-bag-size ?bag - gripper ?size - gnum)
 )
-(:constants free-true - gripper-property1)
 (:action move
 	:parameters (?from - room ?to - room)
 	:precondition (at-robby ?from)
